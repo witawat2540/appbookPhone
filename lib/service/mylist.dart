@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class Mylist extends StatelessWidget {
   final String? name, tel, url;
   final ontab;
+  final delete;
+  final edit;
 
   const Mylist({
     Key? key,
@@ -10,6 +12,8 @@ class Mylist extends StatelessWidget {
     this.tel,
     this.url,
     this.ontab,
+    this.delete,
+    this.edit,
   }) : super(key: key);
 
   @override
@@ -29,7 +33,7 @@ class Mylist extends StatelessWidget {
             child: RaisedButton(
               padding: EdgeInsets.all(2),
               color: Colors.orange,
-              onPressed: () {},
+              onPressed: edit,
               child: Icon(
                 Icons.edit,
                 color: Colors.white,
@@ -45,7 +49,7 @@ class Mylist extends StatelessWidget {
             child: RaisedButton(
               padding: EdgeInsets.all(2),
               color: Colors.redAccent,
-              onPressed: () {},
+              onPressed: delete,
               child: Icon(
                 Icons.delete,
                 color: Colors.white,
